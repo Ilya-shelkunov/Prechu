@@ -1,0 +1,86 @@
+@import "bootstrap/bootstrap.less";
+@import "variables.less";
+
+body
+    {
+    	.wrapper {
+    		nav {  
+                color: #000000;
+                  float: right;
+                  background-color: #ffffff;
+                  
+                  .active {
+                        background-color: #ffffff;
+                  }
+            }
+        }
+
+    	       .carousel {
+    					
+    					.item {
+                            .col-md-6 {
+                                        text-align: left;
+                                        padding-bottom: 75px;
+                                        button {
+                                        background-color: #5094f2;
+                                        } 
+                                        @media screen and (max-width: 768px) { /* разрешение планшета */
+                                                    padding-bottom: 15px;
+
+                                                    h1 {
+                                                            font-size: 20px;
+                                                    }
+                                                    p {
+                                                            font-size: 10px;
+                                                    }
+                                                    button {
+                                                        font-size: 11px;
+
+                                                    }
+                                        }
+                                        @media screen and (max-width: 480px) { /* разрешение смартфона */
+                                                    padding-bottom: 8px;
+                                                    h1 {
+                                                            min-width: 320px;
+                                                            font-size: 16px;
+                                                    }
+                                                     p {
+                                                             min-width: 320px;
+                                                            font-size: 7px;
+                                                    }
+                                                    button {
+                                                        font-size: 6px;
+                                                    }
+                                        }
+                            }    
+                        }
+    				}
+    		.wrapper {
+    			   .prod {
+    			        padding-top: 50px;
+                        text-align: center;
+                        
+                        
+                            
+
+    			     }
+                     .cart {
+                        padding-top: 50px;
+                        color: @text-color;
+                        .row {
+                            .text {
+                                padding-top: 50px;
+                            }
+                        }
+                     }
+    		}
+            footer {
+                padding-top: 50px;
+                padding-bottom: 40px;
+                p {
+                  padding-top: 20px; 
+                  text-align: center;
+                }
+            }
+     		
+    }

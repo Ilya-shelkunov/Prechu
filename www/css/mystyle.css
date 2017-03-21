@@ -1,0 +1,68 @@
+div.social
+{
+background-color: #eecc00;
+height:  35px;
+padding-top: 5px;
+}
+img.icon
+{
+	width: 25px;
+}
+.log>img
+{
+	width: 100%;
+	height: auto;
+}
+.nav>a
+{
+	color: black;
+	font-family: Arial;
+}
+.baner>img
+{
+	width: 100%;
+	
+}
+.news>img
+{
+	width: 100%;
+	height: auto;
+}
+div.news
+{
+	padding-top: 20px;
+}
+div.lenta
+{
+  padding-top: 40px;	
+}
+div.lenta>h3
+{
+	padding-bottom: 5px;
+	padding-left: 20px;
+}
+img + p
+{
+	padding-top: 30px;
+}
+div.container>ul
+{
+	position: absolute;
+    right: 0;
+}
+h4
+{
+	font-weight: bold;
+}
+li
+{
+    font-weight: bold;	
+}
+button.kn
+{
+	border-color: #ff0000;
+}
+button.kn>p
+{
+	color: #ff0000;
+}
