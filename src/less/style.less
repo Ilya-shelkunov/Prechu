@@ -1,77 +1,263 @@
 @import "bootstrap/bootstrap.less";
 @import "variables.less";
+@font-face {
+    font-family: "MyriadProRegular";
+    src: url("../fonts/MyriadProRegular/MyriadProRegular.eot");
+    src: url("../fonts/MyriadProRegular/MyriadProRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"),
+    url("../fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "MyriadProBold"; */
+@font-face {
+    font-family: "MyriadProBold";
+    src: url("../fonts/MyriadProBold/MyriadProBold.eot");
+    src: url("../fonts/MyriadProBold/MyriadProBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MyriadProBold/MyriadProBold.woff") format("woff"),
+    url("../fonts/MyriadProBold/MyriadProBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "MyriadProItalic"; */
+@font-face {
+    font-family: "MyriadProItalic";
+    src: url("../fonts/MyriadProItalic/MyriadProItalic.eot");
+    src: url("../fonts/MyriadProItalic/MyriadProItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MyriadProItalic/MyriadProItalic.woff") format("woff"),
+    url("../fonts/MyriadProItalic/MyriadProItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "MyriadProSemiBold"; */
+@font-face {
+    font-family: "MyriadProSemiBold";
+    src: url("../fonts/MyriadProSemiBold/MyriadProSemiBold.eot");
+    src: url("../fonts/MyriadProSemiBold/MyriadProSemiBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MyriadProSemiBold/MyriadProSemiBold.woff") format("woff"),
+    url("../fonts/MyriadProSemiBold/MyriadProSemiBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "MyriadProBoldItalic"; */
+@font-face {
+    font-family: "MyriadProBoldItalic";
+    src: url("../fonts/MyriadProBoldItalic/MyriadProBoldItalic.eot");
+    src: url("../fonts/MyriadProBoldItalic/MyriadProBoldItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MyriadProBoldItalic/MyriadProBoldItalic.woff") format("woff"),
+    url("../fonts/MyriadProBoldItalic/MyriadProBoldItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "MyriadProSemiBoldItalic"; */
+@font-face {
+    font-family: "MyriadProSemiBoldItalic";
+    src: url("../fonts/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.eot");
+    src: url("../fonts/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.woff") format("woff"),
+    url("../fonts/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/*MyriadProLight*/
+@font-face {
+    font-family: "MyriadProLight"; /* Имя шрифта */
+    src: url(../fonts/MyriadPro-Light.otf); /* Путь к файлу со шрифтом */
+}
+/*cтили страницы*/ 
 
 body
     {
+        font-family: 'MyriadProLight', sans-serif; 
     	.wrapper {
-    		nav {  
+            .logo {
+                padding-top: 30px;
+                padding-bottom: 30px;
+                 @media screen and (max-width: 768px) { /* разрешение планшета */
+                      padding-left: 30px;
+                                                   
+                  }
+
+            }
+    		.navbar-default {  
                 color: #000000;
                   float: right;
                   background-color: #ffffff;
-                  
-                  .active {
-                        background-color: #ffffff;
+                  padding-top: 60px;
+                  font-size: 20px;
+                  /*СТИЛЬ КНИПКИ НАВИГАЦИИ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ*/
+                  .navbar-toggle{
+                     border-color: #5094f8;
+                     background: url(../images/button.png) no-repeat;
+                      width: 58px;
+                      height: 44px;  
+                     
+                  }
+                  @media screen and (max-width: 768px) { /* разрешение планшета */
+                      padding-top: 30px;
+                                                   
+                  }
+                  @media screen and (max-width: 480px) { /* разрешение cмартфона */
+                      padding-top: 30px;
+                  }
+                     .active { 
+                        border-bottom: outset;
+                        border-bottom-color: #7fb4fc;
+
+                        a {
+                          background-color: #ffffff;
+                       }
                   }
             }
         }
-
+                /*СТИЛИ СЛАЙДЕРА*/
     	       .carousel {
-    					
+
+                    @media screen and (max-width: 768px) {
+                        .carousel-indicators {
+                                        display: none;
+                        }
+                    }
+    					/* СТИЛИ СЛАЙДОВ */
     					.item {
-                            .col-md-6 {
+                            
+                            .carousel-caption{ 
+                                        padding-bottom: 0;
+                            
+                                
+                                 /*ТЕКСТ В ПРАВОЙ КОЛОНКЕ*/    
+                                .sing {
+                                        
                                         text-align: left;
-                                        padding-bottom: 75px;
+                                        padding-bottom: 200px;
                                         button {
                                         background-color: #5094f2;
+                                        border-radius: 0;
                                         } 
+                                        h1 {
+                                        font-size: 42px;
+                                        }
+                                        p {
+                                            font-size: 26px;
+                                        }
+                                        button {
+                                            font-size: 22px;
+                                            padding: 3px 12px;
+                                        }
+                                        /*РАЗМЕРЫ ШРИФТА В БЛОКЕ ОПИСАНИЯ */
                                         @media screen and (max-width: 768px) { /* разрешение планшета */
-                                                    padding-bottom: 15px;
+                                                    padding-bottom: 0;
 
                                                     h1 {
-                                                            font-size: 20px;
+                                                            font-size: 30px;
                                                     }
                                                     p {
-                                                            font-size: 10px;
+                                                            font-size: 22px;
                                                     }
                                                     button {
-                                                        font-size: 11px;
+                                                        font-size: 31px;
 
                                                     }
                                         }
                                         @media screen and (max-width: 480px) { /* разрешение смартфона */
-                                                    padding-bottom: 8px;
+                                                    padding-bottom: 0;
                                                     h1 {
                                                             min-width: 320px;
-                                                            font-size: 16px;
+                                                            font-size: 18px;
+                                                            margin-top: 5px;
+                                                            margin-bottom: 5px;
                                                     }
                                                      p {
-                                                             min-width: 320px;
-                                                            font-size: 7px;
+                                                             min-width: 20px;
+                                                            font-size: 12px;
+                                                            margin-top: 5px;
+                                                            margin-bottom: 5px;
                                                     }
                                                     button {
-                                                        font-size: 6px;
-                                                    }
-                                        }
+                                                        font-size: 11px;
+                                                        padding:2px 5px;
+                                
+                                        }           }
+                                }       
                             }    
+                        }
+                       /*СТИЛЬ СТРЕЛОК СЛАЙДЕРА */
+                        .left {
+                            background: url(../images/left.png) no-repeat;
+                            background-position: center center;
+                            width: 10%;
+                        @media screen and (max-width: 768px) { /* разрешение планшета */
+                            display: none;
+                            }
+                            @media screen and (max-width: 480px) { /* разрешение смартфона */
+                            display: none;
+                            
+                            }
+                        }
+                        .right {
+                            background: url(../images/right.png) no-repeat;
+                            background-position: center center;
+                            width: 10%;
+                          @media screen and (max-width: 768px) { /* разрешение планшета */
+                            display: none;
+                            }
+                         @media screen and (max-width: 480px) { /* разрешение смартфона */
+                            display: none;
+                           
+                            }
+                            
                         }
     				}
     		.wrapper {
     			   .prod {
     			        padding-top: 50px;
                         text-align: center;
-                        
-                        
+                        h3 {
+                            font-size: 20px;
+                            color: #5094f2;
+                        }
+                        p {
+                            font-size: 14px;
+                        }
+                    @media screen and (max-width: 768px) { 
+
+                         text-align: none; 
+                        img {
+
+                            width: 137px;
+                            height: 136px;
+                        }
+                        h3 {
+                            font-size: 34px;
+                        }
+                        p {
+                            font-size: 19px;
+                        }
+                    }
                             
 
     			     }
                      .cart {
                         padding-top: 50px;
                         color: @text-color;
-                        .row {
-                            .text {
-                                padding-top: 50px;
+                        
+                            
+                        
+                    
+                            .image {
+                                text-align: center;
+                                @media screen and (max-width: 480px) { /* разрешение смартфона */
+                                img {
+                                    width: 50%;
+                                    height: 50%;
+                                } 
+                              } 
                             }
-                        }
+                                .text {
+                                    padding-top: 50px;
+                                    text-align: left;
+                            }
+                        
                      }
     		}
             footer {
